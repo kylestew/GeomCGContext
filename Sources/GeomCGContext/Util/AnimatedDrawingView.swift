@@ -1,4 +1,3 @@
-#if !os(macOS)
 import UIKit
 import Geom
 import GeomAPI
@@ -42,4 +41,3 @@ public class AnimatedDrawingView : UIView {
         renderer(ctx, rect.rect, currentTime)
     }
 }
-#endif

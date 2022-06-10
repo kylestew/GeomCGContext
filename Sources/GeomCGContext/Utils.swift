@@ -32,3 +32,10 @@ public extension CGRect {
         self.offsetBy(dx: -width/2, dy: -height/2)
     }
 }
+
+public extension CGContext {
+    func clear(rect: CGRect, color: CGColor) {
+        setFillColor(color)
+        fill(rect)
+    }
+}

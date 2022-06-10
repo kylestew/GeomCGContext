@@ -1,6 +1,6 @@
 import CoreGraphics
 import Foundation
-import AppKit
+import UIKit
 
 public struct OfflineDrawingCanvas {
 
@@ -34,10 +34,10 @@ public struct OfflineDrawingCanvas {
         ctx.translateBy(x: margin, y: margin)
     }
 
-    public func clear(_ color: CGColor = NSColor.black.cgColor) {
+    public func clear(_ color: UIColor = UIColor.black) {
         let rect = CGRect(origin: .zero, size: size)
         ctx.saveGState()
-        ctx.setFillColor(color)
+        ctx.setFillColor(color.cgColor)
         ctx.fill(rect.insetBy(dx: -margin, dy: -margin))
         ctx.restoreGState()
     }
@@ -48,16 +48,17 @@ public struct OfflineDrawingCanvas {
 
     public func save(to url: URL) -> Bool {
         guard let cgImage = ctx.makeImage() else { return false}
-        let bmpImgRef = NSBitmapImageRep(cgImage: cgImage)
-        guard let pngData = bmpImgRef.representation(using: .png, properties: [:]) else {
-            return false
-        }
-        do {
-            try pngData.write(to: url)
-            return true
-        } catch {
-            return false
-        }
+        fatalError()
+//        let bmpImgRef = NSBitmapImageRep(cgImage: cgImage)
+//        guard let pngData = bmpImgRef.representation(using: .png, properties: [:]) else {
+//            return false
+//        }
+//        do {
+//            try pngData.write(to: url)
+//            return true
+//        } catch {
+//            return false
+//        }
     }
 }
 
