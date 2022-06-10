@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Geom",
+        "repositoryURL": "https://github.com/kylestew/SwiftGeom",
+        "state": {
+          "branch": "ether",
+          "revision": "a358011bef99db8ebc53e00fc81c3b513e6100c4",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

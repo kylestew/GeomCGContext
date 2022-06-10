@@ -1,2 +1,3 @@
 # GeomCGContext
-CGContext extension for Geom lib
+
+A description of this package.
